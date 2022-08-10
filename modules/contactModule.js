@@ -17,4 +17,4 @@ const contactSchema = mongoose.Schema({
     maxLength: 255,
   },
 });
-module.exports = mongoose.model("Contacts", contactSchema);
+export default mongoose.model("Contacts", contactSchema);
