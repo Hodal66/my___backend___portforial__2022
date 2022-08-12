@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const MongoDB = async () => {
+const mongoDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_DB_URL);
     console.log(`MongoDb is runnning`);
@@ -9,5 +9,5 @@ const MongoDB = async () => {
     process.exit(1);
   }
 };
-MongoDB();
-mongoose.exports = MongoDB;
+
+export default mongoDB;
